@@ -31,7 +31,6 @@ class Search extends Component {
     });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchBooks(this.state.search);
@@ -40,7 +39,7 @@ class Search extends Component {
   render() {
     return (
       <Grid container justify="center">
-        <Grid item xs={8}>
+        <Grid item xs={12} sm={10} md={8}>
           <Banner />
           <Searchbox
             search={this.state.search}

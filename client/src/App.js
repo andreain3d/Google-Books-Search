@@ -4,20 +4,15 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Search from "./pages/search";
 import Saved from "./pages/saved";
+import { indigo, orange } from "@material-ui/core/colors";
+
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      light: "#e1e1e1",
-      main: "#660000",
-      dark: "#121212",
-      contrastText: "#faa42a"
-    },
-    secondary: {
-      main: "#faa42a"
-    }
+    primary: indigo,
+    secondary: orange
   }
 });
 

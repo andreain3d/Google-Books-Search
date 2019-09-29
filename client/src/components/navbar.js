@@ -5,6 +5,11 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
+
+const styles = {
+  brand: { marginRight: "20px" }
+};
 
 class Navbar extends Component {
   state = {
@@ -21,7 +26,9 @@ class Navbar extends Component {
     return (
       <Appbar position="static">
         <Toolbar>
-          <Typography variant="h4">Google Books Search</Typography>
+          <Typography variant="h4" className={this.props.classes.brand}>
+            Google Books Search
+          </Typography>
           <Tabs
             value={value}
             onChange={this.handleChange}
@@ -29,12 +36,12 @@ class Navbar extends Component {
             textColor="secondary"
             centered
           >
-            <Link to="/">
-              <Tab label="Search" />
-            </Link>
-            <Link to="/saved">
-              <Tab label="Saved" />
-            </Link>
+            {/* <Link to="/"> */}
+            <Tab label="Search" to="/" component={Link} />
+            {/* </Link> */}
+            {/* <Link to="/saved"> */}
+            <Tab label="Saved" to="/saved" component={Link} />
+            {/* </Link> */}
           </Tabs>
         </Toolbar>
       </Appbar>
@@ -42,4 +49,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default withStyles(styles)(Navbar);

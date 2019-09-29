@@ -6,7 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import SavedBooks from "../components/savedbooks";
 
 const styles = {
-  results: { margin: 20, padding: 20 }
+  results: { margin: 20, padding: 20, marginBottom: 50 }
 };
 
 class SavedResults extends Component {
@@ -17,15 +17,20 @@ class SavedResults extends Component {
         <Grid item xs={12}>
           <Paper className={this.props.classes.results}>
             <Typography variant="h6">Your Saved Books</Typography>
-            {this.props.data.map(book => (
-              <SavedBooks
-                title={book.title}
-                author={book.author}
-                image={book.image}
-                summary={book.summary}
-                key={book._id}
-              />
-            ))}
+            {this.props.data.map(book => {
+              console.log(book._id);
+
+              return (
+                <SavedBooks
+                  title={book.title}
+                  author={book.author}
+                  image={book.image}
+                  summary={book.summary}
+                  id={book._id}
+                  link={book.link}
+                />
+              );
+            })}
           </Paper>
         </Grid>
       </Grid>

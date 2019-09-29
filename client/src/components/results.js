@@ -6,7 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import SearchedBooks from "./searchedbooks";
 
 const styles = {
-  results: { margin: 20, padding: 20 }
+  results: { margin: 20, padding: 20, marginBottom: 50 }
 };
 
 class Results extends Component {
@@ -23,6 +23,7 @@ class Results extends Component {
                   author={book.volumeInfo.authors.join(", ")}
                   image={book.volumeInfo.imageLinks.thumbnail}
                   summary={book.volumeInfo.description}
+                  link={book.selfLink}
                   key={book.id}
                 />
               );

@@ -33,9 +33,9 @@ class Saved extends Component {
   render() {
     return (
       <Grid container justify="center">
-        <Grid item xs={8}>
+        <Grid item xs={12} md={8}>
           <Banner />
-          <SavedResults data={this.state.results} />
+          <SavedResults reload={this.loadBooks} data={this.state.results} />
         </Grid>
       </Grid>
     );
