@@ -22,16 +22,20 @@ function SearchBox(props) {
               <Grid item xs={12}>
                 <TextField
                   fullWidth
+                  onChange={props.handleInputChange}
                   name="title"
                   label="Book Title"
-                  //   value={title}
-                  //   onChange={this.handleChange}
                   margin="normal"
                 />
               </Grid>
             </Grid>
             <Grid container justify="flex-end">
-              <Button type="submit" color="secondary" variant="contained">
+              <Button
+                type="submit"
+                color="secondary"
+                variant="contained"
+                onClick={props.handleFormSubmit}
+              >
                 <SearchIcon />
                 Search
               </Button>

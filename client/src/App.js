@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import "./App.css";
-import Grid from "@material-ui/core/Grid";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Banner from "./components/banner";
-import Searchbox from "./components/searchbox";
-import Results from "./components/results";
 import Footer from "./components/footer";
+import Search from "./pages/search";
+import Saved from "./pages/saved";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import "./App.css";
 
 const theme = createMuiTheme({
   palette: {
@@ -27,17 +26,14 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <Navbar />
-        <Grid container justify="center">
-          <Grid item xs={8}>
-            <Banner />
-            <Searchbox />
-            <Results />
-          </Grid>
-        </Grid>
-        <Footer />
-      </MuiThemeProvider>
+      <Router>
+        <MuiThemeProvider theme={theme}>
+          <Navbar />
+          <Route exact path="/" component={Search} />
+          <Route exact path="/saved" component={Saved} />
+          <Footer />
+        </MuiThemeProvider>
+      </Router>
     );
   }
 }
