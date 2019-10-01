@@ -5,7 +5,6 @@ import Grid from "@material-ui/core/Grid";
 import { TextField, Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
-import { getThemeProps } from "@material-ui/styles";
 
 const styles = {
   searchbox: { margin: 20, padding: 20 }

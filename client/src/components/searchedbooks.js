@@ -75,7 +75,9 @@ class SearchedBooks extends Component {
                 <img alt="" src={this.props.image} />
               </Grid>
               <Grid item xs={12} md={8}>
-                <Typography variant="body1">{this.props.summary}</Typography>
+                <Typography variant="body1">
+                  {this.props.summary || "No Description Available."}
+                </Typography>
               </Grid>
             </Grid>
           </Paper>

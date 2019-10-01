@@ -25,7 +25,8 @@ class SavedResults extends Component {
                   title={book.title}
                   author={book.author}
                   image={book.image}
-                  summary={book.summary}
+                  summary={book.summary || "No Description Available."}
+                  key={book._id}
                   id={book._id}
                   link={book.link}
                 />
