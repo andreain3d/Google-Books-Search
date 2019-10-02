@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Appbar, Toolbar, Tabs, Tab, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Tabs, Tab, Typography } from "@material-ui/core";
 // import Toolbar from "@material-ui/core/Toolbar";
 // import Tabs from "@material-ui/core/Tabs";
 // import Tab from "@material-ui/core/Tab";
@@ -24,7 +24,7 @@ class Navbar extends Component {
     const { value } = this.state;
 
     return (
-      <Appbar position="static">
+      <AppBar position="static">
         <Toolbar>
           <Typography variant="h4" className={this.props.classes.brand}>
             Google Books Search
@@ -44,7 +44,7 @@ class Navbar extends Component {
             {/* </Link> */}
           </Tabs>
         </Toolbar>
-      </Appbar>
+      </AppBar>
     );
   }
 }

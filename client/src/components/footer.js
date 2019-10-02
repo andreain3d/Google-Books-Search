@@ -1,7 +1,5 @@
 import React from "react";
-import Appbar from "@material-ui/core/Appbar";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+import { AppBar, Typography, withStyles } from "@material-ui/core";
 
 const styles = {
   appBar: {
@@ -12,9 +10,9 @@ const styles = {
 
 function Footer(props) {
   return (
-    <Appbar className={props.classes.appBar} position="fixed">
+    <AppBar className={props.classes.appBar} position="fixed">
       <Typography variant="subtitle1">React Google Books Search</Typography>
-    </Appbar>
+    </AppBar>
   );
 }
 
