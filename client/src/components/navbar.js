@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Appbar from "@material-ui/core/Appbar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import { Appbar, Toolbar, Tabs, Tab, Typography } from "@material-ui/core";
+// import Toolbar from "@material-ui/core/Toolbar";
+// import Tabs from "@material-ui/core/Tabs";
+// import Tab from "@material-ui/core/Tab";
 import { Link } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
