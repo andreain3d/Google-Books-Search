@@ -15,7 +15,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactbooksearch"
+  process.env.MONGODB_URI ||
+    "mongodb://googlebooks:squ1dC@ts@ds329058.mlab.com:29058/heroku_mv6v2323"
 );
 
 app.listen(PORT, function() {
