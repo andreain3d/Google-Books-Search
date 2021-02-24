@@ -1,4 +1,4 @@
-# Clicky-Game
+# React Google Books Search
 
 Book search and save application using Google Books and built with React.
 

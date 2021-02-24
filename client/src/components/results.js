@@ -19,10 +19,10 @@ class Results extends Component {
             {this.props.searchData.map(book => {
               return (
                 <SearchedBooks
-                  title={book.volumeInfo.title}
-                  author={book.volumeInfo.authors.join(", ")}
-                  image={book.volumeInfo.imageLinks.thumbnail}
-                  summary={book.volumeInfo.description}
+                  title={book.volumeInfo.title || ""}
+                  author={book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : ""}
+                  image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""}
+                  summary={book.volumeInfo.description || ""}
                   link={book.selfLink}
                   key={book.id}
                 />
