@@ -14,14 +14,13 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-// const connection = "mongodb+srv://andrea:<password>@<cluster>/<database>?retryWrites=true&w=majority";
-// mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
-//     .then(() => console.log("Database Connected Successfully"))
-//     .catch(err => console.log(err));
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactbooksearch",{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+    .then(() => console.log("Database Connected Successfully"))
+    .catch(err => console.log(err));
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactbooksearch"
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost/reactbooksearch"
+// );
 
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
